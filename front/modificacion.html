@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="recursos/js/modificacion.js"></script>
+    <link rel="stylesheet" type="text/css" href="recursos/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a id="navListado" href="index.html">Listado de productos</a>
+            <a id="navAlta" href="alta.html">Alta de productos</a>
+        </nav>
+    </header>
+    <main>
+        <form action="http://localhost:3000/productos" method="PUT" class="product-form" id="formulario_productos">
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" name="categoria" placeholder="Categoría">
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+            
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" placeholder="Marca">
+            
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" name="stock" placeholder="Stock">
+
+            <div class="form-button-wrapper">
+                <button type="submit" class="form-button" id="enviarFormulario">Editar</button>
+                <button type="button" class="form-button" id="borrarFormulario">Borrar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
