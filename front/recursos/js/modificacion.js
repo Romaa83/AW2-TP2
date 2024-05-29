@@ -43,7 +43,7 @@ formulario.addEventListener('submit', async (evento)=>{
     console.log(formDataJSON)
 
     await fetch(`http://localhost:3000/productos/${idURL}`, {
-        method: 'PUT', // Puedes ajustar el método según sea necesario
+        method: 'PUT', 
         headers: {
             'Content-Type': 'application/json'
         },
@@ -64,5 +64,4 @@ document.getElementById('borrarFormulario').addEventListener('click', async (eve
     })
         window.location.href = 'index.html'
     }
-    
 })
