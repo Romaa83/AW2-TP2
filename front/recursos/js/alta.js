@@ -1,3 +1,10 @@
+const contenedorMensaje = document.getElementById('mensaje-accion');
+const mostrarMensajeOk = (mensaje) => {
+    contenedorMensaje.textContent = mensaje;
+    contenedorMensaje.style.display = 'block';
+    contenedorMensaje.classList.add('mensaje-accion-ok');
+};
+
 //Se obtiene el ID del formulario
 const formulario = document.getElementById("formulario_productos")
 formulario.addEventListener('submit', async (evento)=>{
@@ -7,13 +14,17 @@ formulario.addEventListener('submit', async (evento)=>{
     const datos = new FormData(formulario)
     const datosFormulario = Object.fromEntries(datos)
     //Se le envia los datos y el metodo al servidor
-    await fetch(('http://localhost:3000/productos'), {
+    const respuesta = await fetch(('http://localhost:3000/productos'), {
         headers:{
             'Content-Type':'application/json'
         },
         method: "POST",
         body:   JSON.stringify(datosFormulario)
     })
+    if (respuesta.ok) {
+        mostrarMensajeOk('Producto dado de alta');
+        formulario.reset();
+    }
     //redirecciona
-    window.location.href = 'index.html'
+    //window.location.href = 'index.html'
 })

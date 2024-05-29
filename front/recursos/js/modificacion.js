@@ -66,21 +66,3 @@ document.getElementById('borrarFormulario').addEventListener('click', async (eve
     }
     
 })
-// const eliminarProducto = (id_producto) => {
-//     const botonEliminar = document.getElementById('borrar-producto');
-//     botonEliminar.addEventListener('click', async () => {
-//         const confirmar = confirm('Está por eliminar un producto, ¿Continuar?');
-//         if (confirmar) {
-//             const respuesta = await fetch(
-//                 `http://localhost:3000/api/v1/productos/${id_producto}`,
-//                 {
-//                     method: 'DELETE',
-//                 },
-//             );
-//             if (respuesta.ok) {
-//                 // Redireccionamos a inicio
-//                 location.href = './';
-//             }
-//         }
-//     });
-// };

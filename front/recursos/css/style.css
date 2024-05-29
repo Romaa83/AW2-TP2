@@ -74,6 +74,13 @@ h1 {
     background-color: #f8f8f8;
 }
 
+.mensaje-accion {
+    text-align: center; 
+    font-size: 2em; 
+    font-weight: bold; 
+    margin: 20px 0; 
+}
+
 /* Estilo específico para el enlace de modificación */
 .modificacion {
     display: block;
