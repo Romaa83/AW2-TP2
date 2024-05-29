@@ -1,8 +1,11 @@
 const traerProductos = async()=>{
     try {
+        //se obtiene el ID del grid para agregar los productos
         const contenedor = document.getElementById('listado_productos')
+        //se obtienen los datos de la url
         const datosProductos = await fetch('http://localhost:3000/productos')
         const datosJSON = await datosProductos.json()
+        //Se declara una variable para poner los productos en el HTML
         let HTML = '';
         datosJSON.productos.forEach((producto) => {
             HTML += `
